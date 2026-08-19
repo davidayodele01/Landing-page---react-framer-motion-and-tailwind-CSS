@@ -17,3 +17,4 @@ If you are developing a production application, we recommend using TypeScript wi
 # Landing-page---react-and-tailwind-CSS
 # Landing-page---react-and-tailwind-CSS
 # Landing-page---react-framer-motion-and-tailwind-CSS
+# Landing-page---react-framer-motion-and-tailwind-CSS
