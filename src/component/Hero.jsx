@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import {textVariant} from "../utils/motion"
+import heroImage from "../assets/hero-image.png"
+
 
 const Hero = () => {
+  
   return (
     <div
       id="home"
@@ -72,13 +75,17 @@ const Hero = () => {
       whileInView="show"
       
       
-      className="w-full h-200px md:w-[42%] pt-6 ">
+      className="w-full md:w-[42%] pt-6 ">
         <div>
-          <img
+          {/* <img
             src="src/assets/hero-image.png"
             alt="Hero-image"
             className="rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300"
-          />
+          /> */}
+
+          <img src={heroImage} alt="Hero-image" />
+
+        
         </div>
       </motion.div>
     </div>
