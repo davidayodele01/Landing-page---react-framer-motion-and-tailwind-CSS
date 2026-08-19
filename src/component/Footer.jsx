@@ -31,10 +31,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
           {/* brand column */}
           <div className="flex flex-col gap-2 lg:col-span-4">
-            <div className="flex items-center gap-1 cursor-pointer">
-              <div className="w-4 h-4 bg-blue-500 rounded-full opacity-75 hover:opacity-100 transition-opacity "></div>
-              <div className="w-4 h-4 bg-red-500 ml-2 rounded-full opacity-100 hover:opacity-75 "></div>
-            </div>
+            <div className="flex items-center gap-1 cursor-pointer" >
+        <div className="w-4 h-4 bg-blue-500 rounded-full opacity-75 hover:opacity-100 transition-opacity "></div>
+        <div className="w-4 h-4 bg-red-500 -ml-2 rounded-full opacity-100 hover:opacity-75 "></div>
+      </div>
             <div className="flex gap-1 items-center">
               <span className="text-base font-medium ">The Next Design</span>
             </div>
@@ -92,7 +92,7 @@ const Footer = () => {
         {/* footer bottom section */}
         <div className="mt-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-gray-600 text-sm ">Copyright <span className="border-black">©️</span> {new Date().getFullYear()} <codetutorbd className="com"></codetutorbd> </p>
+                <p className="text-gray-600 text-sm ">Copyright <span className="">©</span> {new Date().getFullYear()} <codetutorbd className="com"></codetutorbd> </p>
                 <p className="text-600 text-sm">Created by kda_design</p>
             </div>
         </div>

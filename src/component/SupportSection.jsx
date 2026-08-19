@@ -2,6 +2,8 @@ import { BsStack } from "react-icons/bs";
 import { HiLightBulb } from "react-icons/hi";
 import { FiSettings } from "react-icons/fi";
 import { BiTime } from "react-icons/bi";
+import {motion} from "framer-motion"
+import {fadeIn} from "../utils/motion"
 
 
 
@@ -36,10 +38,15 @@ const SupportSection = () => {
         <section className="py-20 container mx-auto px-4 sm:px-6 lg:px-8" id="services">
             <div className="flex flex-col md:flex-row items-center justify-between gap-9 lg:gap-24 ">
                 {/* LHS */}
-                <div className="">
+                <motion.div 
+                variants = {fadeIn("right", 0.3)}
+                initial = "hidden"
+                whileInView = "show"
+                
+                className="">
                     <div>
-                        <h3 className="text-neutral-900 font-bold">Future of support with new shape</h3>
-                    <p className="w-[350PX]">Discuss your goal, determine success metrics, identify problems</p>
+                        <h3 className="text-neutral-900 font-bold text-3xl md:text-4xl lg:text-4xl">Future of support with new shape</h3>
+                    <p className="text-base w-full lg:w-[350PX] pt-6">Discuss your goal, determine success metrics, identify problems</p>
                     </div>
 
                     {/* bullet point */}
@@ -48,20 +55,25 @@ const SupportSection = () => {
                             <div className="bg-purple-100 w-4 h-4 rounded-full flex items-center justify-center"><div className="bg-purple-400 w-2 h-2 rounded-full it"></div></div>
                             <p>UX design content strategy</p>
                         </div>
-                        <div className="flex items-center gap-2 ">
+                        <div className="flex items-center gap-2 pb-6">
                             <div className="bg-purple-100 w-4 h-4 rounded-full flex items-center justify-center"><div className="bg-purple-400 w-2 h-2 rounded-full it"></div></div>
                             <p>Developement bring</p>
                         </div>
 
                         {/* button */}
-                        <button className="bg-purple-600 text-white py-3 px-5 rounded-full">Get Started</button>
+                        <button className="bg-purple-600 hover:bg-purple-800 text-white py-3 px-5 rounded-full w-full md:w-[250px]">Get Started</button>
                         
                     </div>
                     
-                </div>
+                </motion.div>
 
                 {/* RHS */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-6"> 
+                <motion.div
+                variants = {fadeIn("left", 0.4)}
+                initial = "hidden"
+                whileInView = "show"
+                
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 py-6"> 
                     {services.map((service, index)=>(
                         <div key={index} className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="mb-4">
@@ -77,7 +89,7 @@ const SupportSection = () => {
 
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
      );

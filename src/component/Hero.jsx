@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../ultils/motion";
-import {textVariant} from "../ultils/motion"
+import { fadeIn } from "../utils/motion";
+import {textVariant} from "../utils/motion"
 
 const Hero = () => {
   return (
     <div
       id="home"
-      className="container sm:w-full mx-auto flex flex-col md:flex-row justify-between items-center pt-44 pb-6 px-4"
+      className="container sm:w-full mx-auto flex flex-col md:flex-row justify-between items-center pt-32 pb-6 px-4 lg:px-8"
     >
       {/* LHS */}
       <div className="w-full md:w-[58%] space-y-8">
@@ -53,7 +53,7 @@ const Hero = () => {
         </motion.p>
 
         {/* Email input */}
-        <div className="flex gap-3 max-w-md">
+        <div className="flex gap-3 max-w-md pt-2">
           <input
             type="email"
             placeholder="Enter your email"
@@ -72,7 +72,7 @@ const Hero = () => {
       whileInView="show"
       
       
-      className="w-full md:w-[42%]">
+      className="w-full h-200px md:w-[42%] pt-6 ">
         <div>
           <img
             src="src/assets/hero-image.png"

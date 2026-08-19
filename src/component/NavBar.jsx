@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { FiX } from "react-icons/fi";
 import { motion } from "framer-motion"
-import {fadeIn} from "../ultils/motion"
+import {fadeIn} from "../utils/motion"
 
 
 const NavBar = () => {

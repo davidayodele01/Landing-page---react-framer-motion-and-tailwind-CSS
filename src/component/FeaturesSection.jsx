@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeIn} from "../utils/motion"
+
 const FeaturesSection = () => {
   const features = [
     {
@@ -17,18 +20,27 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 item-center justify-center">
+    <section className="max-w-7xl mx-auto px-4 py-10 item-center justify-center">
       {/* Headline Text */}
-      <div className="text-center mb-12">
+      <motion.div 
+      variants = {fadeIn("down", 0.2)}
+      initial = "hidden"
+      whileInView = "show"
+      className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">
           How can we help your business
         </h2>
         <p className="text-gray-600">
           When you resell beniks, you build your trust and increase{" "}
         </p>
-      </div>
+      </motion.div>
       {/* Content for features */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
+      <motion.div 
+      variants = {fadeIn("up", 0.3)}
+      initial = "hidden"
+      whileInView = "show"
+      
+      className="grid grid-cols-1 md:grid-cols-3 gap-1 items-center justify-center">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center  p-6">
             {/* icon */}
@@ -52,10 +64,10 @@ const FeaturesSection = () => {
           </div>
         ))}
         
-      </div>
+      </motion.div>
       {/* button */}
             <div className="button text-center items-center justify-center w-full mt-12">
-              <button className="bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full font=medium hover:bg-blue-700 transition-colors relative justify-center items-center">
+              <button className="bg-blue-600 text-white cursor-pointer px-8 py-3 w-full sm:w-[200px] rounded-full font=medium hover:bg-blue-700 transition-colors relative justify-center items-center">
                 Become a partner
                 <div className="absolute -z-10 w-full h-full rounded-full bg-blue-600/50 blur-xl top-0 left-0"></div>
               </button>

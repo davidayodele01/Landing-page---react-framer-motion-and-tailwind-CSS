@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import{fadeIn} from "../utils/motion";
+
 const PurposeSection = () => {
   const features = [
     {
@@ -14,21 +17,27 @@ const PurposeSection = () => {
     },
   ];
   return (
-    <section  id="about" className="w-full bg-gray-50 py-16 px-4 sm:px-6 md:px-8">
-      <div className="max-w-6xl mx-auto">
+    <section  id="about" className="w-full bg-blue-100 py-10 ">
+      <motion.div
+      variants = {fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      
+      
+      className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-3">
           {/* RHS */}
-          <div>
+          <div className="">
             <p className="text-sm text-purple-600 font-medium mb-2">
               ACHIEVE MORE{" "}
             </p>
-            <h2 className="text-3xl md:w-4/5 w-full md:text-4xl font-bold text-gray-900 ">
+            <h2 className="text-3xl md:w-4/5 w-full md:text-3 font-bold text-gray-900 ">
               Purpose of a convoy is to keep your team
             </h2>
           </div>
 
           {/* bullet point */}
-          <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 justify-between gap-8"> 
+          <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 justify-between gap-8 pt-6"> 
             {features.map((feature, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="w-12 h-12 flex items-center justify-start rounded-lg">{feature.icon}</div>
@@ -43,7 +52,7 @@ const PurposeSection = () => {
           
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

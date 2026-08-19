@@ -3,6 +3,8 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { motion } from "framer-motion";
+import {fadeIn} from "../utils/motion"
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -44,7 +46,13 @@ const TestimonialSection = () => {
     },
   ];
   return (
-    <section id="testimonial" className="  py-16 px-4 max-w-7xl mx-auto">
+    <motion.section
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView="show"
+      id="testimonial"
+      className="  py-16 px-4 max-w-7xl mx-auto"
+    >
       <div className="text-center backdrop:mb-12">
         <h2 className="text-3xl font-bold md:text-4xl mb-4">
           What Our Happy Client Says
@@ -59,12 +67,10 @@ const TestimonialSection = () => {
         {/* swiper card::: i visit swiperjs.com then install the application in the terminal, on the LHS, navigation and pagnation*/}
 
         <Swiper
-        navigation={
-            {
-                nextEl: ".swiper-button-next-custom",
-                prevEl: ".swiper-button-prev-custom",
-            }
-         }
+          navigation={{
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
+          }}
           spaceBetween={30}
           pagination={{
             clickable: true,
@@ -83,39 +89,48 @@ const TestimonialSection = () => {
           modules={[Navigation]}
           className="testimoniaL-swiper md:mb-12"
         >
-        {
-            testimonials.map((testimonial, index)=>(
-                <SwiperSlide key={index} className="h-full md:py-12 py-4">
-                    <div className="items-center justify-center">
-                        <div className="w-24 h-24 mx-auto mb-4">
-                            <img src={testimonial.image} alt="testimonial-image" className="w-full h-full object-cover rounded-full"/>
-                        </div>
-                        <div className=" flex items-center justify-center">
-                            {[...Array(5)].map((_, starIndex)=>(
-                                <span key={starIndex} className="text-yellow-500 justify-center items-center">⭐</span>
-                            ))}
-                        </div>
-                        <h3 className="flex text-xl font-semibold mb-3 items-center justify-center">{testimonial.name}</h3>
-                        <p className="flex text-gray-600 items-center justify-center">{testimonial.text}</p>
-                    </div>
-                </SwiperSlide>
-            ))
-        }
-          
-         
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index} className="h-full md:py-12 py-4">
+              <div className="items-center justify-center">
+                <div className="w-24 h-24 mx-auto mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt="testimonial-image"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className=" flex items-center justify-center">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <span
+                      key={starIndex}
+                      className="text-yellow-500 justify-center items-center"
+                    >
+                      ⭐
+                    </span>
+                  ))}
+                </div>
+                <h3 className="flex text-xl font-semibold mb-3 items-center justify-center">
+                  {testimonial.name}
+                </h3>
+                <p className="flex text-gray-600 items-center justify-center">
+                  {testimonial.text}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
 
         {/* navigation button */}
         <div className="flex items-center justify-center gap-5">
-            <button className=" swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer">
-                <BsChevronLeft className="size-6"/>
-            </button>
-            <button className=" swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer">
-                <BsChevronRight className="size-6"/>
-            </button>
+          <button className=" swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer">
+            <BsChevronLeft className="size-6" />
+          </button>
+          <button className=" swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer">
+            <BsChevronRight className="size-6" />
+          </button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
