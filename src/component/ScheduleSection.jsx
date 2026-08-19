@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import {motion} from "framer-motion"
 import {fadeIn} from "../utils/motion"
+import monitor_card from "../assets/monitor-card.webp"
 
 
 
@@ -16,7 +17,7 @@ const ScheduleSection = () => {
         whileInView = "show"
         >
 
-            <img src="src/assets/monitor-card.webp" alt="monitor-image" />
+            <img src={monitor_card} alt="monitor-image" />
         </motion.div>
         {/* RHS */}
         <motion.div 

@@ -85,6 +85,8 @@ const Hero = () => {
 
           <img src={heroImage} alt="Hero-image" />
 
+          
+
         
         </div>
       </motion.div>

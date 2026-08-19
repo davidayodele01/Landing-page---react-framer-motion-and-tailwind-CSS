@@ -1,5 +1,6 @@
 import {motion} from "framer-motion"
 import {textVariant, fadeIn} from "../utils/motion"
+import monitorcard from "../assets/monitor-card.webp"
 
 
 
@@ -49,7 +50,7 @@ const MonitorSection = () => {
         whileInView="show"
         
         >
-          <img src="src/assets/monitor-card.webp" alt="image" />
+          <img src={monitorcard} alt="image" />
         </motion.div>
       </div>
     </section>
