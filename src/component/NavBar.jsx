@@ -63,37 +63,33 @@ const NavBar = () => {
         </button>
 
         {/* mobile menu item (navigation)   */}
-      {
-        isMenuOpen && (
-          <motion.div 
-          variants={fadeIn( 'left', 0.3 )}
-          initial = "hidden"
-          whileInView="show"
-          
-          className="md:hidden  bg-white px-5 border-gray-100 py-4 absolute w-full left-0 top-full shadow-lg">
+        {isMenuOpen && (
+          <motion.div
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            className="md:hidden  bg-white px-5 border-gray-100 py-4 absolute w-full left-0 top-full shadow-lg"
+          >
             <div className="container mx-auto top-0 left-0 px-0 space-y-3">
-              {
-                navLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    onClick={()=>{
+              {navLinks.map((link, index) => (
+                <a
+                  key={index}
+                  onClick={() => {
                     setActiveLink(link.href);
                     setIsMenuOpen(false);
-                  }} 
-                  className={`block text-sm font-medium  py-2 ${activeLink === link.href ? "text-blue-500": "text-gray-600 hover:text-blue-400"}`} href={link.href}>{link.label}</a>
-                ))
-              }
+                  }}
+                  className={`block text-sm font-medium  py-2 ${activeLink === link.href ? "text-blue-500" : "text-gray-600 hover:text-blue-400"}`}
+                  href={link.href}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
             <button className=" bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-800 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100 w-full">
-        <a href="#newsletter">Get in touch</a>
-      </button>
+              <a href="#newsletter">Get in touch</a>
+            </button>
           </motion.div>
-        )
-      }
-
-      
-
-        
+        )}
       </nav>
     </motion.header>
   );
