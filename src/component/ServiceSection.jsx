@@ -7,7 +7,7 @@ import {fadeIn} from "../utils/motion"
 
 
 
-const SupportSection = () => {
+const ServiceSection = () => {
     const services = [
     {
       icon: <BsStack className="w-8 h-8 text-indigo-600" />,
@@ -95,4 +95,4 @@ const SupportSection = () => {
      );
 }
  
-export default SupportSection;
+export default ServiceSection;

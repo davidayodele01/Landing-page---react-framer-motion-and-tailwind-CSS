@@ -8,11 +8,13 @@ import MonitorSection from "./component/MonitorSection";
 import PricingSection from "./component/PricingSection";
 import PurposeSection from "./component/PurposeSection";
 import ScheduleSection from "./component/ScheduleSection";
-import SupportSection from "./component/SupportSection";
+
 import TestimonialSection from "./component/TestimonialSection";
 import NewsLetterSection from "./component/NewsLetterSection";
 import Footer from "./component/Footer";
 import NavBar from "./component/NavBar"
+import SupportSSSection from "./component/SupportSSSection";
+import ServiceSection from "./component/ServiceSection";
 
 
 function App() {
@@ -32,9 +34,11 @@ function App() {
           <ScheduleSection/>
           <MonitorSection/>
           <PricingSection/>
-          <SupportSection/>
+          <ServiceSection/>
+          
           <TestimonialSection/>
           <NewsLetterSection/>
+          <SupportSSSection/>
           <Footer/>
           
           

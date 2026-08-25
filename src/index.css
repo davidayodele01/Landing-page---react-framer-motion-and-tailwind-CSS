@@ -60,3 +60,49 @@ html {
 .clip-path-slant{
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)
 }
+
+
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid #06a055;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+    background: #ffffff;
+  display: inline-block;
+ 
+  
+ 
+  position: relative;
+  list-style: none;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #06a055 !important;
+  border: 1px solid #06a055 !important;
+  color: #fff !important;
+  border-radius: 5px;
+  outline:none;
+}
+
+
+
+
+
+
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
